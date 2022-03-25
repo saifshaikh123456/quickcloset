@@ -1,0 +1,387 @@
+:root {
+  /* --primary: #6e6e6e; */
+  /* --accent: #bcfd4c; */
+  --text: #ffffff;
+  --transparent: #00000033;
+  --semi-transparent: #00000088;
+
+  --primary: #dcdcdc;
+  --accent: #5f9ea0;
+  --heading: #777777;
+}
+@font-face {
+  font-family: Montserrat;
+  src: url("../fonts/Montserrat-Regular.ttf");
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  color: var(--text);
+  font-family: Montserrat;
+}
+*::placeholder {
+  color: var(--text);
+}
+body {
+  background: var(--primary);
+}
+.navbar {
+  display: flex;
+  background: var(--accent);
+}
+.navbar > ul {
+  display: flex;
+  list-style-type: none;
+  align-items: center;
+  width: 70%;
+  margin-left: auto;
+  justify-content: space-evenly;
+}
+.navbar > ul > li > a {
+  text-decoration: none;
+  color: var(--text);
+  padding-left: 6px;
+  padding-right: 6px;
+}
+.navbar > ul > li > a:hover {
+  background: var(--primary);
+  transition: all 0.3s;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  color: #000000;
+}
+
+footer {
+  position: fixed;
+  bottom: 0;
+  width: 100vw;
+  padding-bottom: 4px;
+  padding-top: 4px;
+  background: var(--semi-transparent);
+  text-align: center;
+}
+
+.register {
+  height: 80vh;
+  background: black;
+  display: grid;
+  place-items: center;
+  background: var(--semi-transparent);
+  margin: 30px;
+}
+.register > form {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  height: 400px;
+  width: 300px;
+  position: relative;
+  top: -30px;
+}
+.register > form > input {
+  background: var(--transparent);
+  border: 2px solid var(--text);
+  padding: 10px;
+  outline: none;
+}
+.register > form > button {
+  background: none;
+  border: 2px solid #ffffff;
+  padding: 10px;
+  font-size: 20px;
+}
+.register > form > button:hover {
+  background: var(--accent);
+  transition: all 0.4s;
+}
+.success {
+  color: #00ff00;
+  background: var(--semi-transparent);
+  padding-top: 3px;
+  padding-bottom: 3px;
+}
+.error {
+  color: #ff0000;
+  background: var(--semi-transparent);
+  padding-top: 3px;
+  padding-bottom: 3px;
+}
+.warning {
+  color: #ffff00;
+  background: var(--semi-transparent);
+  padding-top: 3px;
+  padding-bottom: 3px;
+}
+.home_top_btns {
+  background: var(--transparent);
+  display: flex;
+  justify-content: space-around;
+  height: 8vh;
+  align-items: center;
+  cursor: pointer;
+}
+.home_top_btns > a {
+  text-decoration: none;
+}
+.home_top_btns > a > h3 {
+  color: #ffffff;
+}
+.home_top_btns > a > h3:hover {
+  text-shadow: 1px 1px 1px var(--accent);
+  transition: all 0.4s;
+}
+.products {
+  height: 144vh;
+}
+.home_other_products {
+  display: block;
+}
+.home_product {
+  background: var(--semi-transparent);
+  float: left;
+  width: 22%;
+  height: 280px;
+  margin: 1.5%;
+  display: flex;
+  flex-direction: column;
+}
+.home_product > img {
+  width: 100%;
+  height: 220px;
+}
+.home_product > p {
+  text-align: center;
+  margin-top: 8px;
+}
+.home_product > form > button {
+  border: none;
+  outline: none;
+  font-size: 20px;
+  background: var(--transparent);
+  margin-top: 6px;
+  cursor: pointer;
+  width: 100%;
+}
+.home_product > form > button:hover {
+  background: #ff000099;
+  transition: all 0.2s;
+}
+.sell {
+  height: 80vh;
+  background: black;
+  display: grid;
+  place-items: center;
+  background: var(--semi-transparent);
+  overflow: hidden;
+  margin: 30px;
+}
+.sell > form {
+  height: 350px;
+  width: 50vw;
+  position: relative;
+  top: -30px;
+  display: flex;
+  flex-direction: column;
+}
+.sell > form > input,
+.sell > form > div > input,
+.sell > form > textarea {
+  background: var(--transparent);
+  border: 2px solid var(--text);
+  padding: 10px;
+  outline: none;
+  margin-bottom: 30px;
+}
+.sell > form > div {
+  display: flex;
+  justify-content: space-between;
+}
+.sell > form > div > .half {
+  width: 48%;
+  align-self: center;
+  height: 50px;
+}
+.sell > form > button {
+  background: none;
+  border: 2px solid #ffffff;
+  padding: 10px;
+  font-size: 20px;
+  width: 200px;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+.sell > form > button:hover {
+  background: var(--accent);
+  transition: all 0.4s;
+}
+.details {
+  height: 90vh;
+  margin-left: 30px;
+  margin-right: 30px;
+  display: flex;
+  align-items: center;
+}
+.details > div > *,
+.details > div > * > * {
+  color: black;
+}
+.details > img {
+  width: 500px;
+  height: 500px;
+  margin-right: 40px;
+}
+.details > div > .payments {
+  margin-top: 40px;
+}
+.details > div > .payments > i {
+  margin-right: 28px;
+  color: black;
+}
+.details > div > .payments > i:hover {
+  color: var(--accent);
+  transition: all 0.2s;
+}
+.details > div > form {
+  display: inline;
+}
+.details > div > button,
+.details > div > form > button {
+  margin-top: 30px;
+  outline: none;
+  border: 2px solid var(--accent);
+  background: none;
+  font-size: 20px;
+  padding: 10px;
+  cursor: pointer;
+}
+.details > div > button > i,
+.details > div > form > button > i {
+  color: black;
+}
+.details > div > button:hover,
+.details > div > form > button:hover {
+  background: var(--semi-transparent);
+  transition: all 0.3s;
+}
+
+.m20 {
+  margin-top: 20px;
+}
+.about {
+  background: var(--semi-transparent);
+  height: 80vh;
+  margin: 30px;
+  display: flex;
+  flex-direction: column;
+}
+.about > img {
+  width: 30%;
+  height: 20vh;
+  align-self: center;
+}
+
+.about > p,
+.about > h1 {
+  margin: 20px;
+}
+.about > h3 {
+  margin: auto;
+  text-align: center;
+}
+.contact {
+  background: var(--semi-transparent);
+  height: 80vh;
+  margin: 30px;
+}
+.contact > h1 {
+  text-align: center;
+  position: relative;
+  top: 40px;
+}
+.contact > form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 100px;
+}
+.contact > form > input,
+.contact > form > textarea {
+  border: 2px solid white;
+  outline: none;
+  background: var(--transparent);
+  width: 300px;
+  height: 40px;
+  padding: 10px;
+  margin: 20px;
+}
+.contact > form > textarea {
+  height: 20vh;
+}
+.contact > form > button {
+  border: 2px solid white;
+  padding: 10px;
+  font-size: 16px;
+  background: var(--transparent);
+  margin-top: 20px;
+}
+.users {
+  background: var(--semi-transparent);
+  float: left;
+  width: 16%;
+  height: 210px;
+  margin: 2%;
+  display: flex;
+  flex-direction: column;
+}
+.users > img {
+  width: 100%;
+  height: 150px;
+}
+.users > p {
+  text-align: center;
+  margin-top: 8px;
+}
+.users > form > button,
+.users > button {
+  border: 2px solid white;
+  background: none;
+  margin-top: 4px;
+  padding: 4px;
+  width: 100%;
+  cursor: pointer;
+}
+.dark_heading {
+  color: #ffffff;
+}
+.heading {
+  margin-left: 20px;
+  color: var(--heading);
+}
+.heading_user {
+  margin-left: 26px;
+  color: var(--heading);
+}
+.search {
+  margin-right: 20px;
+  margin-left: 20px;
+  display: flex;
+  background: var(--semi-transparent);
+  margin-top: 8px;
+  border: 2px solid white;
+  height: 40px;
+}
+.search > i {
+  font-size: 20px;
+  align-self: center;
+  padding: 10px;
+}
+.search > input {
+  width: 100%;
+  background: none;
+  border: none;
+  font-size: 14px;
+  padding-left: 14px;
+  outline: none;
+}
